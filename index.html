@@ -60,7 +60,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input id='first-count' class="inp-style inp-width" type="text" name="" value="1">
+                    <input id='first-count' class="inp-style inp-width" type="text" value="0">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="handleTicketCounter('first', true)" class="btn btn-primary">+</button>
@@ -71,7 +71,7 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input id='economy-count' class="inp-style inp-width" type="text" value="1">
+                    <input id='economy-count' class="inp-style inp-width" type="text" value="0">
                 </div>
                 <div class="plus-minus-btn">
                     <button onclick="handleTicketCounter('economy',true)" class="btn btn-primary">+</button>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick= 'Notification()' class="btn-style">Book Now</button>
         </div>
     </main>
 <script>
@@ -122,7 +122,6 @@
           ticketNewCount = ticketCount - 1;
       }
       Input.value = ticketNewCount;
-      let productTotal = 0;
       calculateTotal();
    }
 
@@ -143,6 +142,10 @@
                 const Total = subTotal + vat;
                 document.getElementById('total').innerText = '$' + Total;
             } 
+            function Notification() {
+                alert("Confirm purchase");
+            }
+
 </script>   
 </body>
 
